@@ -1,0 +1,13 @@
+tasks:
+- dummy: false
+  filename: /home/alex/Desktop/airscooter-quickstart-example/depositor.py
+  name: depositor
+  output: [/home/alex/Desktop/airscooter-quickstart-example/nyc-east-river-bicycle-counts.zip]
+  type: depositor
+- dummy: false
+  filename: /home/alex/Desktop/airscooter-quickstart-example/transform.py
+  input: [/home/alex/Desktop/airscooter-quickstart-example/nyc-east-river-bicycle-counts.zip]
+  name: transform
+  output: [/home/alex/Desktop/airscooter-quickstart-example/nyc-east-river-bicycle-counts.csv]
+  requirements: [depositor]
+  type: transform
